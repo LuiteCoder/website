@@ -4,7 +4,6 @@ app = flask.Flask(__name__)
 
 # this is so its easier. i dont wanna do url 1 by one tho.
 
-@app.route("/<url>")
 @app.route("/<url>/")
 def home(url):
     try:
@@ -17,7 +16,7 @@ def home(url):
 
 @app.route("/")
 def redirect():
-    return flask.redirect(f"{flask.request.url}index", code=302)
+    return flask.render_template('index.html')
 
 
 
