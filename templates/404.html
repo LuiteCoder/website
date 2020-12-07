@@ -5,8 +5,9 @@
     </head>
     <body>
         <nav>
-            <p class="navbar-name">{{ title }}</p> 
+            <p class="navbar-name">{{ title }} | 404</p> 
         </nav>
+        <p class="text">404 url not found ({{ url }})</p> 
     </body>
 </html>
 
@@ -29,5 +30,10 @@ nav {
     -webkit-box-shadow: 0px 10px 26px 9px rgba(181,181,181,1);
     -moz-box-shadow: 0px 10px 26px 9px rgba(181,181,181,1);
     box-shadow: 0px 10px 26px 9px rgba(181,181,181,1);
+}
+.text {
+    margin-top: 50px;
+    font-size: 30px;
+    margin-left: 35%;
 }
 </style>
