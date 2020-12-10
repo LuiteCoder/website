@@ -20,6 +20,10 @@ def home(url):
 def img(path):
     return flask.send_from_directory('img', path)
 
+@app.route('/img/')
+def img_home():
+    return flask.render_template(f"img.html", title=site_title)
+
 @app.errorhandler(404)
 def site_not_found(e):
     return flask.render_template("404.html", url=f"{flask.request.url}", title=site_title), 404
@@ -31,4 +35,4 @@ def redirect():
 
 
 if __name__ == "__main__":
-    app.run(port=83, host="0.0.0.0")
+    app.run(port=81, host="0.0.0.0")
